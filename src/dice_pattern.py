@@ -43,7 +43,7 @@ def pattern_prob(pattern, die=6):
         print("\nWarning! the pattern %s is unordered!"%pattern, sets)
         print("Do you have equivalent patterns?")
     if len(sets) > die:
-        print("Warning! the pattern %s has more characters than possible dice outcomes (%i)!"%(pattern,die), sets)
+        print("\nWarning! the pattern %s has more characters than possible dice outcomes (%i)!"%(pattern,die), sets)
 
     countr = 1
     setcounts = []
@@ -75,7 +75,7 @@ def pattern_prob(pattern, die=6):
     print(" =",counta)
 
     count = counta*countr
-    print("total: %i + %i = %i"%(countr,counta,count))
+    print("total: %i * %i = %i"%(countr,counta,count))
     print("probability: ",count/(die**l))
     return count
 
